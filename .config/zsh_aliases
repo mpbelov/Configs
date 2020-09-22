@@ -1,0 +1,5 @@
+alias cls="clear"
+alias ..="cd .."
+alias ...="cd ../.."
+
+alias dn="dotnet"

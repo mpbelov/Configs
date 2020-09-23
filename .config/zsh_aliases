@@ -21,5 +21,5 @@ alias dn="dotnet"
 # Android
 alias adbet="adb -e shell input text"
 alias adbdt="adb -d shell input text"
-alias uiautov='$ANDROID_HOME/tools/bin/uiautomatorviewer'
+alias auiautov='$ANDROID_HOME/tools/bin/uiautomatorviewer'
 alias asdk='cd $ANDROID_HOME'

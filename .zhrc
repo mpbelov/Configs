@@ -1,6 +1,7 @@
 export ZSH="/home/mikhail/.oh-my-zsh"
 
 # ZSH_THEME="robbyrussell"
+# ZSH_THEME="af-magic"
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -44,15 +45,20 @@ HIST_STAMPS="yyyy-mm-dd"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
+# ####### Plugins #######
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode gulp adb yarn react-native node)
+plugins=(sudo history copyfile copydir z zsh-autosuggestions vscode git jsontools adb gulp react-native node yarn)
+# VERY SLOW:
+#   zsh-syntax-highlighting
+# NOT WORKING:
+#   zsh-interactive-cd
+
 
 source $ZSH/oh-my-zsh.sh
 
+# ######################
+# User configuration
 
 # Fix environment for Wayland + zsh + snapd
 # https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1640514
@@ -62,10 +68,6 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ] ; then
         source /etc/profile.d/apps-bin-path.sh
     fi
 fi
-
-# ######################
-# User configuration
-# ######################
 
 prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
@@ -83,25 +85,23 @@ prompt_end() {
 
 PROMPT='%{$fg[yellow]%}[%D{%F} %D{%T} %D{%Z}]'$PROMPT
 
+
 # ####### NodeJS #######
 npm set prefix ~/.npm
 PATH="$HOME/.npm/bin:$PATH"
 PATH="./node_modules/.bin:$PATH"
 #export PATH=$PATH:$HOME/Programs/Watchman/bin
 
+
 # ######## Java ########
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
 export PATH=$PATH:$JAVA_HOME/bin
 
+
 # ###### Android #######
 export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
+
 
 # ###### Aliases #######
-
 source ~/.config/zsh_aliases
-
-

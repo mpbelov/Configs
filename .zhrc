@@ -108,4 +108,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$ANDROID_H
 
 
 # ###### Aliases #######
-source ~/.config/zsh_aliases
+source ~/.config/zsh-aliases

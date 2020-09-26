@@ -32,7 +32,7 @@ sudo sh -c "echo emulate sh -c \'source /etc/profile\' >> /etc/zsh/zprofile"
 
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
+flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
 
 flatpak install flathub org.telegram.desktop
 flatpak install flathub org.keepassxc.KeePassXC

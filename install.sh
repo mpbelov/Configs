@@ -36,3 +36,4 @@ flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kde
 
 flatpak install flathub org.telegram.desktop
 flatpak install flathub org.keepassxc.KeePassXC
+flatpak install flathub com.sublimemerge.App

@@ -27,6 +27,8 @@ sudo apt-get install fonts-powerline
 
 # install stores
 sudo snap install snap-store
+sudo sh -c "echo emulate sh -c \'source /etc/profile\' >> /etc/zsh/zprofile"
+
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 

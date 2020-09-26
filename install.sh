@@ -16,9 +16,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # install zsh theme powerlevel10k https://github.com/romkatv/powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-curl https://raw.githubusercontent.com/mpbelov/Configs/master/.zhrc?token=ABJHTETRKKDBFUK3VN73IQC7N63IO -o ~/.zhrc
-curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/zsh-aliases\?token\=ABJHTEQMBEGJIIEQIB2GSYC7N62X6 -o ~/.config/zsh-aliases
-curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/.p10k.zsh?token=ABJHTERBPJ5TOXCUEJVO4GC7N63E4 -o ~/.config/.p10k.zsh
+curl https://raw.githubusercontent.com/mpbelov/Configs/master/.zhrc -o ~/.zhrc
+curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/zsh-aliases -o ~/.config/zsh-aliases
+curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/.p10k.zsh -o ~/.config/.p10k.zsh
 
 # install stores
 sudo snap install snap-store

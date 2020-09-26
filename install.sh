@@ -16,7 +16,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # install zsh theme powerlevel10k https://github.com/romkatv/powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-sudo wget --content-disposition -P /usr/local/share/fonts/powerline/robotomono https://github.com/powerline/fonts/raw/master/RobotoMono/Roboto%20Mono%20{Bold,Bold%20Italic,Italic,Light,Light%20Italic,Medium,Medium%20Italic,Regular,Thin,Thin%20Italic}%20for%20Powerline.ttf
+# sudo wget --content-disposition -P /usr/local/share/fonts/powerline/robotomono https://github.com/powerline/fonts/raw/master/RobotoMono/Roboto%20Mono%20{Bold,Bold%20Italic,Italic,Light,Light%20Italic,Medium,Medium%20Italic,Regular,Thin,Thin%20Italic}%20for%20Powerline.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf
 
 curl https://raw.githubusercontent.com/mpbelov/Configs/master/.zhrc -o ~/.zhrc
 curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/zsh-aliases -o ~/.config/zsh-aliases

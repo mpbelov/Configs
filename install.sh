@@ -20,6 +20,8 @@ curl https://raw.githubusercontent.com/mpbelov/Configs/master/.zhrc -o ~/.zhrc
 curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/zsh-aliases -o ~/.config/zsh-aliases
 curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/.p10k.zsh -o ~/.config/.p10k.zsh
 
+sudo apt-get install fonts-powerline
+
 # install stores
 sudo snap install snap-store
 sudo apt install flatpak

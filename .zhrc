@@ -73,6 +73,11 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ] ; then
     fi
 fi
 
+# Fix problem with tilix https://gnunn1.github.io/tilix-web/manual/vteconfig/
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
       print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"

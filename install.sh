@@ -26,6 +26,8 @@ curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/.p10k.zsh 
 # sudo apt-get install fonts-powerline
 
 sudo apt install tilix
+# fix tilix https://gnunn1.github.io/tilix-web/manual/vteconfig/
+sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 
 # install stores
 sudo snap install snap-store

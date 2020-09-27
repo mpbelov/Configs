@@ -1,0 +1,50 @@
+[
+    {
+        "iconPath": "/home/mikhail/.config/albert/org.albert.extension.websearch/{d7f326c1-4fa1-4ae6-95d8-8e9392651ab5}.",
+        "name": "Lingvo",
+        "trigger": "lv",
+        "url": "https://www.lingvolive.com/ru-ru/translate/ru-en/%s"
+    },
+    {
+        "iconPath": "/home/mikhail/.config/albert/org.albert.extension.websearch/{5606cd5a-0169-4a21-8f2a-72eae31bd137}.",
+        "name": "Lingvo",
+        "trigger": "ll",
+        "url": "https://www.lingvolive.com/ru-ru/translate/ru-en/%s"
+    },
+    {
+        "iconPath": ":google",
+        "name": "Google",
+        "trigger": "gg ",
+        "url": "https://www.google.com/search?q=%s"
+    },
+    {
+        "iconPath": "/home/mikhail/.config/albert/org.albert.extension.websearch/{e32078e3-c38a-4bb9-878c-6a9217ef0d72}.",
+        "name": "Amazon",
+        "trigger": "ama ",
+        "url": "http://www.amazon.co.uk/s/?field-keywords=%s"
+    },
+    {
+        "iconPath": ":github",
+        "name": "GitHub",
+        "trigger": "gh ",
+        "url": "https://github.com/search?utf8=✓&q=%s"
+    },
+    {
+        "iconPath": ":wolfram",
+        "name": "Wolfram Alpha",
+        "trigger": "=",
+        "url": "https://www.wolframalpha.com/input/?i=%s"
+    },
+    {
+        "iconPath": "/home/mikhail/.config/albert/org.albert.extension.websearch/{7d5a23aa-fdb9-4bbb-9bc9-aa3017834db6}.",
+        "name": "Google Maps",
+        "trigger": "gm",
+        "url": "https://www.google.com/maps/search/%s"
+    },
+    {
+        "iconPath": ":duckduckgo",
+        "name": "DuckDuckGo",
+        "trigger": "dd ",
+        "url": "https://duckduckgo.com/?q=%s"
+    }
+]

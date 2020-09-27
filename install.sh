@@ -54,3 +54,9 @@ sudo apt update
 sudo apt install albert
 
 sudo snap install --classic code
+
+sudo apt install tmux
+sudo apt install neovim
+
+curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs

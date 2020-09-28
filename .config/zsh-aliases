@@ -23,3 +23,6 @@ alias adbet="adb -e shell input text"
 alias adbdt="adb -d shell input text"
 alias auiautov='$ANDROID_HOME/tools/bin/uiautomatorviewer'
 alias asdk='cd $ANDROID_HOME'
+
+# Python
+alias python='/usr/bin/python3'

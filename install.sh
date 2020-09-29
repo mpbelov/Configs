@@ -75,4 +75,5 @@ sudo apt install -y openjdk-11-jre
 
 sudo apt install -y python3-pip
 
-sudo apt install playonlinux
+sudo apt install -y playonlinux
+sudo apt install -y gparted

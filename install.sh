@@ -77,3 +77,4 @@ sudo apt install -y python3-pip
 
 sudo apt install -y playonlinux
 sudo apt install -y gparted
+sudo apt install -y qbittorrent

@@ -7,6 +7,9 @@ chsh -s $(which zsh)
 sudo apt install -y git
 sudo apt install -y curl
 
+git config --global user.name "Mikhail Belov"
+git config --global user.email "mpbelov@gmail.com"
+
 # install oh-my-zsh https://github.com/ohmyzsh/ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

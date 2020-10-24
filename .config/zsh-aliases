@@ -8,6 +8,7 @@ alias ...="cd ../.."
 # alias ll='ls -lG'
 # alias ld='ls -ldG ./*/'
 
+
 # Linux
 alias ls="ls -a --color=auto"
 alias lsd='ls -ad --color=auto ./*/'
@@ -18,11 +19,16 @@ alias ld='ls -ld --color=auto ./*/'
 # Dotnet
 alias dn="dotnet"
 
+
 # Android
 alias adbet="adb -e shell input text"
 alias adbdt="adb -d shell input text"
 alias auiautov='$ANDROID_HOME/tools/bin/uiautomatorviewer'
 alias asdk='cd $ANDROID_HOME'
 
+
 # Python
 alias python='/usr/bin/python3'
+
+# Sublime Merge
+alias sm='smerge'

@@ -1,5 +1,5 @@
 sudo dnf install zsh -y
-chsh -s $(which zsh)
+sudo usermod --shell $(which zsh) $(whoami)
 
 sudo dnf install fish -y
 

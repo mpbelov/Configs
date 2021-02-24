@@ -12,8 +12,8 @@ alias ...="cd ../.."
 # Linux
 alias ls="ls -a --color=auto"
 alias lsd='ls -ad --color=auto ./*/'
-alias ll='ls -l --color=auto'
-alias ld='ls -ld --color=auto ./*/'
+alias ll='ls -lh --color=auto'
+alias ld='ls -lhd --color=auto ./*/'
 
 
 # Dotnet

@@ -63,6 +63,7 @@ sudo fc-cache -f
 
 # Install GUI dconf editor
 sudo dnf install dconf-editor -y
+gsettings set org.gnome.mutter auto-maximize false
 
 # Add world clocks
 gsettings set org.gnome.shell.world-clocks locations "[<(uint32 2, <('Moscow', 'UUWW', true, [(0.97127572873484425, 0.65042604039431762)], [(0.97305983920281813, 0.65651530216830811)])>)>, <(uint32 2, <('Vancouver', 'CYVR', true, [(0.85841109795478021, -2.1496638678574467)], [(0.85957465660720722, -2.1490820798045869)])>)>]"
@@ -89,7 +90,6 @@ gsettings set com.gexperts.Tilix.Settings terminal-title-style 'none'
 gsettings set com.gexperts.Tilix.Settings theme-variant 'dark'
 gsettings set com.gexperts.Tilix.Settings use-tabs true
 gsettings set com.gexperts.Tilix.Settings window-save-state true
-
 
 # Install VS Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc

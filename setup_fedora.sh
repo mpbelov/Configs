@@ -69,3 +69,15 @@ sudo dnf install code -y
 # Install NodeJS
 sudo dnf install nodejs -y
 
+
+# Install .NET
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
+sudo dnf install dotnet-sdk-5.0 -y
+#sudo dnf install dotnet-sdk-3.1 -y
+
+# Install sublime merge
+sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+sudo dnf install sublime-merge -y
+

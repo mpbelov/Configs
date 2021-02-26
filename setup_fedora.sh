@@ -2,6 +2,7 @@ sudo dnf install zsh -y
 sudo usermod --shell $(which zsh) $(whoami)
 
 sudo dnf install fish -y
+sudo dnf install xclip -y
 
 # Install fonts
 mkdir -p /home/mikhail/temp

@@ -6,12 +6,12 @@ sudo dnf install xclip -y
 
 # Install fonts
 mkdir -p /home/mikhail/temp
-wget -O /home/mikhail/temp/Open_Sans.zip https://fonts.google.com/download?family=Open%20Sans
-unzip -d /home/mikhail/temp/Open_Sans/ /home/mikhail/temp/Open_Sans.zip
+wget -O /home/mikhail/temp/OpenSans.zip https://fonts.google.com/download?family=Open%20Sans
+unzip -d /home/mikhail/temp/OpenSans/ /home/mikhail/temp/OpenSans.zip
 sudo mkdir -p /usr/local/share/fonts/google/OpenSans
-sudo cp /home/mikhail/temp/Open_Sans/* /usr/local/share/fonts/google/OpenSans/
-rm -rf /home/mikhail/temp/Open_Sans/
-rm /home/mikhail/temp/Open_Sans.zip
+sudo cp /home/mikhail/temp/OpenSans/* /usr/local/share/fonts/google/OpenSans/
+rm -rf /home/mikhail/temp/OpenSans/
+rm /home/mikhail/temp/OpenSans.zip
 
 wget -O /home/mikhail/temp/Roboto.zip https://fonts.google.com/download?family=Roboto
 unzip -d /home/mikhail/temp/Roboto/ /home/mikhail/temp/Roboto.zip
@@ -26,6 +26,20 @@ sudo mkdir -p /usr/local/share/fonts/google/NotoSans
 sudo cp /home/mikhail/temp/NotoSans/* /usr/local/share/fonts/google/NotoSans/
 rm -rf /home/mikhail/temp/NotoSans/
 rm /home/mikhail/temp/NotoSans.zip
+
+wget -O /home/mikhail/temp/RobotoSlab.zip https://fonts.google.com/download?family=Roboto%20Slab.zip
+unzip -d /home/mikhail/temp/RobotoSlab/ /home/mikhail/temp/RobotoSlab.zip
+sudo mkdir -p /usr/local/share/fonts/google/RobotoSlab
+sudo cp /home/mikhail/temp/RobotoSlab/* /usr/local/share/fonts/google/RobotoSlab/
+rm -rf /home/mikhail/temp/RobotoSlab/
+rm /home/mikhail/temp/RobotoSlab.zip
+
+wget -O /home/mikhail/temp/SourceSerifPro.zip https://fonts.google.com/download?family=Source_Serif_Pro.zip \
+&& unzip -d /home/mikhail/temp/SourceSerifPro/ /home/mikhail/temp/SourceSerifPro.zip \
+&& sudo mkdir -p /usr/local/share/fonts/google/SourceSerifPro \
+&& sudo cp /home/mikhail/temp/SourceSerifPro/* /usr/local/share/fonts/google/SourceSerifPro/ \
+&& rm -rf /home/mikhail/temp/SourceSerifPro/ \
+&& rm /home/mikhail/temp/SourceSerifPro.zip
 
 sudo fc-cache -f
 

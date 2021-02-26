@@ -14,18 +14,19 @@ alias ls="ls -a --color=auto"
 alias lsd='ls -ad --color=auto ./*/'
 alias ll='ls -lh --color=auto'
 alias ld='ls -lhd --color=auto ./*/'
-
+alias oo='xdg-open .'
+alias e='gedit'
 
 # Dotnet
 alias dn="dotnet"
-
+alias dnr="dotnet run"
+alias dnp="dotnet publish"
 
 # Android
 alias adbet="adb -e shell input text"
 alias adbdt="adb -d shell input text"
 alias auiautov='$ANDROID_HOME/tools/bin/uiautomatorviewer'
 alias asdk='cd $ANDROID_HOME'
-
 
 # Python
 alias python='/usr/bin/python3'

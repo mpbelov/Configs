@@ -4,6 +4,24 @@ sudo usermod --shell $(which zsh) $(whoami)
 sudo dnf install fish -y
 sudo dnf install xclip -y
 
+# Config git
+git config --global user.name "Mikhail Belov"
+git config --global user.email "mpbelov@gmail.com"
+
+# Update configurations
+## ZSH Aliases
+mkdir -p /home/mikhail/Projects 
+cd /home/mikhail/Projects
+git clone git@github.com:mpbelov/Configs.git
+rm -f /home/mikhail/.config/zsh-aliases
+ln -s /home/mikhail/Projects/Configs/.config/zsh-aliases /home/mikhail/.config/zsh-aliases
+
+## Omnisharp
+mkdir -p /home/mikhail/.omnisharp
+rm -f /home/mikhail/.omnisharp/omnisharp.json
+ln -s /home/mikhail/Projects/Configs/.omnisharp/omnisharp.json /home/mikhail/.omnisharp/omnisharp.json
+
+
 # Install fonts
 mkdir -p /home/mikhail/temp
 wget -O /home/mikhail/temp/OpenSans.zip https://fonts.google.com/download?family=Open%20Sans
@@ -71,17 +89,6 @@ gsettings set com.gexperts.Tilix.Settings terminal-title-style 'none'
 gsettings set com.gexperts.Tilix.Settings theme-variant 'dark'
 gsettings set com.gexperts.Tilix.Settings use-tabs true
 gsettings set com.gexperts.Tilix.Settings window-save-state true
-
-# Config git
-git config --global user.name "Mikhail Belov"
-git config --global user.email "mpbelov@gmail.com"
-
-# ZSH Aliases
-mkdir -p /home/mikhail/Projects 
-cd /home/mikhail/Projects
-git clone git@github.com:mpbelov/Configs.git
-rm -f /home/mikhail/.config/zsh-aliases
-ln -s /home/mikhail/Projects/Configs/.config/zsh-aliases /home/mikhail/.config/zsh-aliases
 
 
 # Install VS Code

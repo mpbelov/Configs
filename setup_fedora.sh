@@ -76,6 +76,14 @@ gsettings set com.gexperts.Tilix.Settings window-save-state true
 git config --global user.name "Mikhail Belov"
 git config --global user.email "mpbelov@gmail.com"
 
+# ZSH Aliases
+mkdir -p /home/mikhail/Projects 
+cd /home/mikhail/Projects
+git clone git@github.com:mpbelov/Configs.git
+rm -f /home/mikhail/.config/zsh-aliases
+ln -s /home/mikhail/Projects/Configs/.config/zsh-aliases /home/mikhail/.config/zsh-aliases
+
+
 # Install VS Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'

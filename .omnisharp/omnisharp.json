@@ -44,9 +44,9 @@
         "NewLinesForBracesInAnonymousTypes": false,
         "NewLinesForBracesInObjectCollectionArrayInitializers": false,
         "NewLinesForBracesInLambdaExpressionBody": false,
-        "NewLineForElse": true,
-        "NewLineForCatch": true,
-        "NewLineForFinally": true,
+        "NewLineForElse": false,
+        "NewLineForCatch": false,
+        "NewLineForFinally": false,
         "NewLineForMembersInObjectInit": true,
         "NewLineForMembersInAnonymousTypes": true,
         "NewLineForClausesInQuery": true

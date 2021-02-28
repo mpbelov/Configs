@@ -9,18 +9,19 @@ git config --global user.name "Mikhail Belov"
 git config --global user.email "mpbelov@gmail.com"
 
 # Update configurations
-## ZSH Aliases
 mkdir -p /home/mikhail/Projects 
 cd /home/mikhail/Projects
 git clone git@github.com:mpbelov/Configs.git
+## ZSH Aliases
 rm -f /home/mikhail/.config/zsh-aliases
 ln -s /home/mikhail/Projects/Configs/.config/zsh-aliases /home/mikhail/.config/zsh-aliases
-
+## p10k zsh theme
+rm -f /home/mikhail/.config/.p10k.zsh
+ln -s /home/mikhail/Projects/Configs/.config/.p10k.zsh /home/mikhail/.config/.p10k.zsh
 ## Omnisharp
 mkdir -p /home/mikhail/.omnisharp
 rm -f /home/mikhail/.omnisharp/omnisharp.json
 ln -s /home/mikhail/Projects/Configs/.omnisharp/omnisharp.json /home/mikhail/.omnisharp/omnisharp.json
-
 
 # Install fonts
 mkdir -p /home/mikhail/temp

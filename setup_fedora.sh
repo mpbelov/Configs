@@ -81,8 +81,8 @@ gsettings set com.gexperts.Tilix.Keybindings win-switch-to-previous-session '<Ct
 gsettings set com.gexperts.Tilix.Keybindings app-new-session '<Ctrl>T'
 gsettings set com.gexperts.Tilix.Keybindings app-new-window '<Ctrl>N'
 gsettings set com.gexperts.Tilix.Keybindings terminal-close '<Ctrl>W'
-gsettings set com.gexperts.Tilix.Keybindings terminal-copy '<Alt>c'
-gsettings set com.gexperts.Tilix.Keybindings terminal-paste '<Alt>v'
+# gsettings set com.gexperts.Tilix.Keybindings terminal-copy '<Alt>c'
+# gsettings set com.gexperts.Tilix.Keybindings terminal-paste '<Alt>v'
 gsettings set com.gexperts.Tilix.Keybindings terminal-find '<Ctrl>f'
 gsettings set com.gexperts.Tilix.Keybindings terminal-find-next '<Ctrl>f'
 gsettings set com.gexperts.Tilix.Keybindings terminal-find-previous '<Ctrl><Shift>f'
@@ -99,7 +99,6 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf check-update
 sudo dnf install code -y
 
-
 # Install NodeJS
 sudo dnf install nodejs -y
 
@@ -107,8 +106,14 @@ sudo dnf install nodejs -y
 # Install .NET
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
+sudo dnf install dotnet-sdk-3.1 -y
 sudo dnf install dotnet-sdk-5.0 -y
-#sudo dnf install dotnet-sdk-3.1 -y
+
+# Install Java
+sudo dnf install java-1.8.0-openjdk-devel.x86_64
+sudo dnf install java-11-openjdk-devel.x86_64
+# sudo alternatives --config java
+
 
 # Install sublime merge
 sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg

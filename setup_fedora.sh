@@ -100,7 +100,11 @@ sudo dnf check-update
 sudo dnf install code -y
 
 # Install NodeJS
-sudo dnf install nodejs -y
+# sudo dnf install nodejs -y
+# https://github.com/nvm-sh/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | zsh
+nvm install --lts
+npm install --global yarn
 
 
 # Install .NET

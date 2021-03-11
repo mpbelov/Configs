@@ -118,6 +118,10 @@ sudo dnf install java-1.8.0-openjdk-devel.x86_64
 sudo dnf install java-11-openjdk-devel.x86_64
 # sudo alternatives --config java
 
+# Install CMake
+sudo dnf install gcc-c++ -y
+sudo dnf install clang -y
+sudo dnf install cmake -y
 
 # Install sublime merge
 sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg

@@ -132,6 +132,7 @@ sudo dnf install code -y
 # sudo dnf install nodejs -y
 # https://github.com/nvm-sh/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | zsh
+source ~/.zshrc
 nvm install --lts
 npm install --global yarn
 
@@ -139,6 +140,7 @@ npm install --global yarn
 # Install .NET
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
+sudo dnf check-update
 sudo dnf install dotnet-sdk-3.1 -y
 sudo dnf install dotnet-sdk-5.0 -y
 
@@ -155,6 +157,7 @@ sudo dnf install cmake -y
 # Install sublime merge
 sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+sudo dnf check-update
 sudo dnf install sublime-merge -y
 
 # Install KeePassXC
@@ -162,6 +165,7 @@ sudo dnf install keepassxc -y
 
 # Install OneDrive client
 sudo dnf install onedrive -y
+mkdir -p /home/mikhail/.config/onedrive
 ln -s /home/mikhail/Projects/Configs/.config/onedrive/config /home/mikhail/.config/onedrive/config
 ln -s /home/mikhail/Projects/Configs/.config/onedrive/sync_list /home/mikhail/.config/onedrive/sync_list
 onedrive # login

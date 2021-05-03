@@ -89,6 +89,10 @@ wget -O /home/mikhail/temp/SourceSerifPro.zip https://fonts.google.com/download?
 
 sudo fc-cache -f
 
+# Fix Firefox video
+# https://rpmfusion.org/Configuration
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 # Install tilix
 sudo dnf install tilix -y
 sudo dnf remove gnome-terminal -y

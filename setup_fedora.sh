@@ -165,6 +165,10 @@ sudo dnf install sublime-merge -y
 flatpak install flathub org.telegram.desktop
 flatpak install flathub org.keepassxc.KeePassXC
 
+# Install Snap
+# https://snapcraft.io/docs/installing-snap-on-fedora
+sudo dnf install snapd -y
+
 # Install OneDrive client
 sudo dnf install onedrive -y
 mkdir -p /home/mikhail/.config/onedrive

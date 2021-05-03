@@ -1,10 +1,21 @@
+# Zsh
 sudo dnf install zsh -y
 sudo usermod --shell $(which zsh) $(whoami)
 
 sudo dnf install fish -y
 sudo dnf install xclip -y
 
-# Config git
+# install oh-my-zsh https://github.com/ohmyzsh/ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install zsh plugin zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# install zsh theme powerlevel10k https://github.com/romkatv/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# Git
+sudo dnf install git -y
 git config --global user.name "Mikhail Belov"
 git config --global user.email "mpbelov@gmail.com"
 
@@ -12,7 +23,10 @@ git config --global user.email "mpbelov@gmail.com"
 mkdir -p /home/mikhail/Projects 
 cd /home/mikhail/Projects
 git clone git@github.com:mpbelov/Configs.git
-## ZSH Aliases
+## .zshrc
+rm -f /home/mikhial/.zshrc
+ln -s /home/mikhail/Projects/Configs/.zshrc /home/mikhail/.zshrc
+## zsh aliases
 rm -f /home/mikhail/.config/zsh-aliases
 ln -s /home/mikhail/Projects/Configs/.config/zsh-aliases /home/mikhail/.config/zsh-aliases
 ## p10k zsh theme
@@ -24,6 +38,19 @@ rm -f /home/mikhail/.omnisharp/omnisharp.json
 ln -s /home/mikhail/Projects/Configs/.omnisharp/omnisharp.json /home/mikhail/.omnisharp/omnisharp.json
 
 # Install fonts
+
+# Roboto Mono Nerd Font
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Bold/complete/Roboto%20Mono%20Bold%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Italic/complete/Roboto%20Mono%20Italic%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Bold-Italic/complete/Roboto%20Mono%20Bold%20Italic%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Light/complete/Roboto%20Mono%20Light%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Light-Italic/complete/Roboto%20Mono%20Light%20Italic%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Medium-Italic/complete/Roboto%20Mono%20Medium%20Italic%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Medium/complete/Roboto%20Mono%20Medium%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Thin/complete/Roboto%20Mono%20Thin%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Thin-Italic/complete/Roboto%20Mono%20Thin%20Italic%20Nerd%20Font%20Complete.ttf
+
 mkdir -p /home/mikhail/temp
 wget -O /home/mikhail/temp/OpenSans.zip https://fonts.google.com/download?family=Open%20Sans
 unzip -d /home/mikhail/temp/OpenSans/ /home/mikhail/temp/OpenSans.zip

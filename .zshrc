@@ -99,7 +99,6 @@ PROMPT='%{$fg[yellow]%}[%D{%F} %D{%T} %D{%Z}]'$PROMPT
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-npm set prefix ~/.npm
 PATH="$HOME/.npm/bin:$PATH"
 PATH="./node_modules/.bin:$PATH"
 #export PATH=$PATH:$HOME/Programs/Watchman/bin

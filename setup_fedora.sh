@@ -131,7 +131,7 @@ sudo dnf install code -y
 # Install NodeJS
 # sudo dnf install nodejs -y
 # https://github.com/nvm-sh/nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | zsh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
 source ~/.zshrc
 nvm install --lts
 npm install --global yarn
@@ -161,7 +161,9 @@ sudo dnf check-update
 sudo dnf install sublime-merge -y
 
 # Install KeePassXC
-sudo dnf install keepassxc -y
+# sudo dnf install keepassxc -y
+flatpak install flathub org.telegram.desktop
+flatpak install flathub org.keepassxc.KeePassXC
 
 # Install OneDrive client
 sudo dnf install onedrive -y

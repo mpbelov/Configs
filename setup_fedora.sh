@@ -181,3 +181,17 @@ ln -s /home/mikhail/Projects/Configs/.config/onedrive/sync_list /home/mikhail/.c
 onedrive # login
 onedrive --synchronize --resync
 systemctl --user enable onedrive && systemctl --user start onedrive
+
+# Further set up
+# https://www.debugpoint.com/2020/10/10-things-to-do-fedora-33-after-install/
+## Video codecs
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf check-update
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf groupupdate sound-and-video -y
+
+# TLP for Battery health management
+sudo dnf install tlp tlp-rdw -y
+sudo dnf install https://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release.fc$(rpm -E %fedora).noarch.rpm -y
+sudo dnf install kernel-devel akmod-acpi_call akmod-tp_smapi -y

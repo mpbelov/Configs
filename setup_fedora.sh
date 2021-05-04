@@ -182,6 +182,13 @@ onedrive # login
 onedrive --synchronize --resync
 systemctl --user enable onedrive && systemctl --user start onedrive
 
+# KVM
+sudo dnf install bridge-utils libvirt virt-install qemu-kvm -y
+sudo dnf install virt-top libguestfs-tools -y
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
+sudo dnf install virt-manager -y
+
 # Further set up
 # https://www.debugpoint.com/2020/10/10-things-to-do-fedora-33-after-install/
 ## Video codecs
@@ -195,3 +202,4 @@ sudo dnf groupupdate sound-and-video -y
 sudo dnf install tlp tlp-rdw -y
 sudo dnf install https://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release.fc$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install kernel-devel akmod-acpi_call akmod-tp_smapi -y
+

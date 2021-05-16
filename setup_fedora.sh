@@ -178,6 +178,7 @@ sudo dnf install onedrive -y
 mkdir -p /home/mikhail/.config/onedrive
 ln -s /home/mikhail/Projects/Configs/.config/onedrive/config /home/mikhail/.config/onedrive/config
 ln -s /home/mikhail/Projects/Configs/.config/onedrive/sync_list /home/mikhail/.config/onedrive/sync_list
+# onedrive --logout
 onedrive # login
 onedrive --synchronize --resync
 systemctl --user enable onedrive && systemctl --user start onedrive

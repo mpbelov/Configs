@@ -158,16 +158,18 @@ sudo dnf install gcc-c++ -y
 sudo dnf install clang -y
 sudo dnf install cmake -y
 
-# Install sublime merge
+# Install Sublime and Sublime Merge
 sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 sudo dnf check-update
+
 sudo dnf install sublime-merge -y
+sudo dnf install sublime-text -y
 
 # Install KeePassXC
-# sudo dnf install keepassxc -y
-flatpak install flathub org.telegram.desktop
-flatpak install flathub org.keepassxc.KeePassXC
+sudo dnf install keepassxc -y
+# flatpak install flathub org.telegram.desktop
+# flatpak install flathub org.keepassxc.KeePassXC
 
 # Install Snap
 # https://snapcraft.io/docs/installing-snap-on-fedora

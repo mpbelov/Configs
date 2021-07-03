@@ -113,6 +113,9 @@ export PATH=$PATH:$JAVA_HOME/bin
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
 
+# ####### Python #######
+export PATH=$PATH:$HOME/.local/bin
+
 
 # ###### Aliases #######
 source ~/.config/zsh-aliases

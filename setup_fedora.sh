@@ -139,6 +139,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
 source ~/.zshrc
 nvm install --lts
 npm install --global yarn
+# fix react native android studio issue https://stackoverflow.com/questions/61922174/react-native-on-android-cannot-run-program-node-error-2-no-such-file-or-dir
+sudo ln -s "$(which node)" /usr/local/bin/node
 
 
 # Install .NET

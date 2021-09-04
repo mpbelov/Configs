@@ -20,22 +20,22 @@ git config --global user.name "Mikhail Belov"
 git config --global user.email "mpbelov@gmail.com"
 
 # Update configurations
-mkdir -p /home/mikhail/Projects 
-cd /home/mikhail/Projects
+mkdir -p /home/$(whoami)/Projects 
+cd /home/$(whoami)/Projects
 git clone git@github.com:mpbelov/Configs.git
 ## .zshrc
-rm -f /home/mikhial/.zshrc
-ln -s /home/mikhail/Projects/Configs/.zshrc /home/mikhail/.zshrc
+rm -f /home/$(whoami)/.zshrc
+ln -s /home/$(whoami)/Projects/Configs/.zshrc /home/$(whoami)/.zshrc
 ## zsh aliases
-rm -f /home/mikhail/.config/zsh-aliases
-ln -s /home/mikhail/Projects/Configs/.config/zsh-aliases /home/mikhail/.config/zsh-aliases
+rm -f /home/$(whoami)/.config/zsh-aliases
+ln -s /home/$(whoami)/Projects/Configs/.config/zsh-aliases /home/$(whoami)/.config/zsh-aliases
 ## p10k zsh theme
-rm -f /home/mikhail/.config/.p10k.zsh
-ln -s /home/mikhail/Projects/Configs/.config/.p10k.zsh /home/mikhail/.config/.p10k.zsh
+rm -f /home/$(whoami)/.config/.p10k.zsh
+ln -s /home/$(whoami)/Projects/Configs/.config/.p10k.zsh /home/$(whoami)/.config/.p10k.zsh
 ## Omnisharp
-mkdir -p /home/mikhail/.omnisharp
-rm -f /home/mikhail/.omnisharp/omnisharp.json
-ln -s /home/mikhail/Projects/Configs/.omnisharp/omnisharp.json /home/mikhail/.omnisharp/omnisharp.json
+mkdir -p /home/$(whoami)/.omnisharp
+rm -f /home/$(whoami)/.omnisharp/omnisharp.json
+ln -s /home/$(whoami)/Projects/Configs/.omnisharp/omnisharp.json /home/$(whoami)/.omnisharp/omnisharp.json
 
 # Install fonts
 
@@ -51,41 +51,41 @@ sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https:
 sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Thin/complete/Roboto%20Mono%20Thin%20Nerd%20Font%20Complete.ttf
 sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Thin-Italic/complete/Roboto%20Mono%20Thin%20Italic%20Nerd%20Font%20Complete.ttf
 
-mkdir -p /home/mikhail/temp
-wget -O /home/mikhail/temp/OpenSans.zip https://fonts.google.com/download?family=Open%20Sans
-unzip -d /home/mikhail/temp/OpenSans/ /home/mikhail/temp/OpenSans.zip
+mkdir -p /home/$(whoami)/temp
+wget -O /home/$(whoami)/temp/OpenSans.zip https://fonts.google.com/download?family=Open%20Sans
+unzip -d /home/$(whoami)/temp/OpenSans/ /home/$(whoami)/temp/OpenSans.zip
 sudo mkdir -p /usr/local/share/fonts/google/OpenSans
-sudo cp /home/mikhail/temp/OpenSans/* /usr/local/share/fonts/google/OpenSans/
-rm -rf /home/mikhail/temp/OpenSans/
-rm /home/mikhail/temp/OpenSans.zip
+sudo cp /home/$(whoami)/temp/OpenSans/* /usr/local/share/fonts/google/OpenSans/
+rm -rf /home/$(whoami)/temp/OpenSans/
+rm /home/$(whoami)/temp/OpenSans.zip
 
-wget -O /home/mikhail/temp/Roboto.zip https://fonts.google.com/download?family=Roboto
-unzip -d /home/mikhail/temp/Roboto/ /home/mikhail/temp/Roboto.zip
+wget -O /home/$(whoami)/temp/Roboto.zip https://fonts.google.com/download?family=Roboto
+unzip -d /home/$(whoami)/temp/Roboto/ /home/$(whoami)/temp/Roboto.zip
 sudo mkdir -p /usr/local/share/fonts/google/Roboto
-sudo cp /home/mikhail/temp/Roboto/* /usr/local/share/fonts/google/Roboto/
-rm -rf /home/mikhail/temp/Roboto/
-rm /home/mikhail/temp/Roboto.zip
+sudo cp /home/$(whoami)/temp/Roboto/* /usr/local/share/fonts/google/Roboto/
+rm -rf /home/$(whoami)/temp/Roboto/
+rm /home/$(whoami)/temp/Roboto.zip
 
-wget -O /home/mikhail/temp/NotoSans.zip https://fonts.google.com/download?family=Noto%20Sans
-unzip -d /home/mikhail/temp/NotoSans/ /home/mikhail/temp/NotoSans.zip
+wget -O /home/$(whoami)/temp/NotoSans.zip https://fonts.google.com/download?family=Noto%20Sans
+unzip -d /home/$(whoami)/temp/NotoSans/ /home/$(whoami)/temp/NotoSans.zip
 sudo mkdir -p /usr/local/share/fonts/google/NotoSans
-sudo cp /home/mikhail/temp/NotoSans/* /usr/local/share/fonts/google/NotoSans/
-rm -rf /home/mikhail/temp/NotoSans/
-rm /home/mikhail/temp/NotoSans.zip
+sudo cp /home/$(whoami)/temp/NotoSans/* /usr/local/share/fonts/google/NotoSans/
+rm -rf /home/$(whoami)/temp/NotoSans/
+rm /home/$(whoami)/temp/NotoSans.zip
 
-wget -O /home/mikhail/temp/RobotoSlab.zip https://fonts.google.com/download?family=Roboto%20Slab.zip
-unzip -d /home/mikhail/temp/RobotoSlab/ /home/mikhail/temp/RobotoSlab.zip
+wget -O /home/$(whoami)/temp/RobotoSlab.zip https://fonts.google.com/download?family=Roboto%20Slab.zip
+unzip -d /home/$(whoami)/temp/RobotoSlab/ /home/$(whoami)/temp/RobotoSlab.zip
 sudo mkdir -p /usr/local/share/fonts/google/RobotoSlab
-sudo cp /home/mikhail/temp/RobotoSlab/* /usr/local/share/fonts/google/RobotoSlab/
-rm -rf /home/mikhail/temp/RobotoSlab/
-rm /home/mikhail/temp/RobotoSlab.zip
+sudo cp /home/$(whoami)/temp/RobotoSlab/* /usr/local/share/fonts/google/RobotoSlab/
+rm -rf /home/$(whoami)/temp/RobotoSlab/
+rm /home/$(whoami)/temp/RobotoSlab.zip
 
-wget -O /home/mikhail/temp/SourceSerifPro.zip https://fonts.google.com/download?family=Source_Serif_Pro.zip \
-&& unzip -d /home/mikhail/temp/SourceSerifPro/ /home/mikhail/temp/SourceSerifPro.zip \
+wget -O /home/$(whoami)/temp/SourceSerifPro.zip https://fonts.google.com/download?family=Source_Serif_Pro.zip \
+&& unzip -d /home/$(whoami)/temp/SourceSerifPro/ /home/$(whoami)/temp/SourceSerifPro.zip \
 && sudo mkdir -p /usr/local/share/fonts/google/SourceSerifPro \
-&& sudo cp /home/mikhail/temp/SourceSerifPro/* /usr/local/share/fonts/google/SourceSerifPro/ \
-&& rm -rf /home/mikhail/temp/SourceSerifPro/ \
-&& rm /home/mikhail/temp/SourceSerifPro.zip
+&& sudo cp /home/$(whoami)/temp/SourceSerifPro/* /usr/local/share/fonts/google/SourceSerifPro/ \
+&& rm -rf /home/$(whoami)/temp/SourceSerifPro/ \
+&& rm /home/$(whoami)/temp/SourceSerifPro.zip
 
 sudo fc-cache -f
 
@@ -179,9 +179,9 @@ sudo dnf install snapd -y
 
 # Install OneDrive client
 sudo dnf install onedrive -y
-mkdir -p /home/mikhail/.config/onedrive
-ln -s /home/mikhail/Projects/Configs/.config/onedrive/config /home/mikhail/.config/onedrive/config
-ln -s /home/mikhail/Projects/Configs/.config/onedrive/sync_list /home/mikhail/.config/onedrive/sync_list
+mkdir -p /home/$(whoami)/.config/onedrive
+ln -s /home/$(whoami)/Projects/Configs/.config/onedrive/config /home/$(whoami)/.config/onedrive/config
+ln -s /home/$(whoami)/Projects/Configs/.config/onedrive/sync_list /home/$(whoami)/.config/onedrive/sync_list
 # onedrive --logout
 onedrive # login
 onedrive --synchronize --resync

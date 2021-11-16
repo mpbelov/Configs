@@ -19,14 +19,76 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # install zsh theme powerlevel10k https://github.com/romkatv/powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-# sudo wget --content-disposition -P /usr/local/share/fonts/powerline/robotomono https://github.com/powerline/fonts/raw/master/RobotoMono/Roboto%20Mono%20{Bold,Bold%20Italic,Italic,Light,Light%20Italic,Medium,Medium%20Italic,Regular,Thin,Thin%20Italic}%20for%20Powerline.ttf
-sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf
+# Update configurations
+mkdir -p /home/$(whoami)/Projects 
+cd /home/$(whoami)/Projects
+git clone git@github.com:mpbelov/Configs.git
+## .zshrc
+rm -f /home/$(whoami)/.zshrc
+ln -s /home/$(whoami)/Projects/Configs/.zshrc /home/$(whoami)/.zshrc
+## zsh aliases
+rm -f /home/$(whoami)/.config/zsh-aliases
+ln -s /home/$(whoami)/Projects/Configs/.config/zsh-aliases /home/$(whoami)/.config/zsh-aliases
+## p10k zsh theme
+rm -f /home/$(whoami)/.config/.p10k.zsh
+ln -s /home/$(whoami)/Projects/Configs/.config/.p10k.zsh /home/$(whoami)/.config/.p10k.zsh
+## Omnisharp
+mkdir -p /home/$(whoami)/.omnisharp
+rm -f /home/$(whoami)/.omnisharp/omnisharp.json
+ln -s /home/$(whoami)/Projects/Configs/.omnisharp/omnisharp.json /home/$(whoami)/.omnisharp/omnisharp.json
 
-curl https://raw.githubusercontent.com/mpbelov/Configs/master/.zhrc -o ~/.zhrc
-curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/zsh-aliases -o ~/.config/zsh-aliases
-curl https://raw.githubusercontent.com/mpbelov/Configs/master/.config/.p10k.zsh -o ~/.config/.p10k.zsh
+# Install fonts
+
+# Roboto Mono Nerd Font
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Bold/complete/Roboto%20Mono%20Bold%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Italic/complete/Roboto%20Mono%20Italic%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Bold-Italic/complete/Roboto%20Mono%20Bold%20Italic%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Light/complete/Roboto%20Mono%20Light%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Light-Italic/complete/Roboto%20Mono%20Light%20Italic%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Medium-Italic/complete/Roboto%20Mono%20Medium%20Italic%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Medium/complete/Roboto%20Mono%20Medium%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Thin/complete/Roboto%20Mono%20Thin%20Nerd%20Font%20Complete.ttf
+sudo wget --content-disposition -P /usr/local/share/fonts/nerd/robotomono https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/Thin-Italic/complete/Roboto%20Mono%20Thin%20Italic%20Nerd%20Font%20Complete.ttf
+
+mkdir -p /home/$(whoami)/temp
+wget -O /home/$(whoami)/temp/OpenSans.zip https://fonts.google.com/download?family=Open%20Sans
+unzip -d /home/$(whoami)/temp/OpenSans/ /home/$(whoami)/temp/OpenSans.zip
+sudo mkdir -p /usr/local/share/fonts/google/OpenSans
+sudo cp /home/$(whoami)/temp/OpenSans/* /usr/local/share/fonts/google/OpenSans/
+rm -rf /home/$(whoami)/temp/OpenSans/
+rm /home/$(whoami)/temp/OpenSans.zip
+
+wget -O /home/$(whoami)/temp/Roboto.zip https://fonts.google.com/download?family=Roboto
+unzip -d /home/$(whoami)/temp/Roboto/ /home/$(whoami)/temp/Roboto.zip
+sudo mkdir -p /usr/local/share/fonts/google/Roboto
+sudo cp /home/$(whoami)/temp/Roboto/* /usr/local/share/fonts/google/Roboto/
+rm -rf /home/$(whoami)/temp/Roboto/
+rm /home/$(whoami)/temp/Roboto.zip
+
+wget -O /home/$(whoami)/temp/NotoSans.zip https://fonts.google.com/download?family=Noto%20Sans
+unzip -d /home/$(whoami)/temp/NotoSans/ /home/$(whoami)/temp/NotoSans.zip
+sudo mkdir -p /usr/local/share/fonts/google/NotoSans
+sudo cp /home/$(whoami)/temp/NotoSans/* /usr/local/share/fonts/google/NotoSans/
+rm -rf /home/$(whoami)/temp/NotoSans/
+rm /home/$(whoami)/temp/NotoSans.zip
+
+wget -O /home/$(whoami)/temp/RobotoSlab.zip https://fonts.google.com/download?family=Roboto%20Slab.zip
+unzip -d /home/$(whoami)/temp/RobotoSlab/ /home/$(whoami)/temp/RobotoSlab.zip
+sudo mkdir -p /usr/local/share/fonts/google/RobotoSlab
+sudo cp /home/$(whoami)/temp/RobotoSlab/* /usr/local/share/fonts/google/RobotoSlab/
+rm -rf /home/$(whoami)/temp/RobotoSlab/
+rm /home/$(whoami)/temp/RobotoSlab.zip
+
+wget -O /home/$(whoami)/temp/SourceSerifPro.zip https://fonts.google.com/download?family=Source_Serif_Pro.zip \
+&& unzip -d /home/$(whoami)/temp/SourceSerifPro/ /home/$(whoami)/temp/SourceSerifPro.zip \
+&& sudo mkdir -p /usr/local/share/fonts/google/SourceSerifPro \
+&& sudo cp /home/$(whoami)/temp/SourceSerifPro/* /usr/local/share/fonts/google/SourceSerifPro/ \
+&& rm -rf /home/$(whoami)/temp/SourceSerifPro/ \
+&& rm /home/$(whoami)/temp/SourceSerifPro.zip
 
 # sudo apt-get install fonts-powerline
+sudo fc-cache -f
 
 sudo apt install -y tilix
 # fix tilix https://gnunn1.github.io/tilix-web/manual/vteconfig/

@@ -94,6 +94,18 @@ sudo apt install -y tilix
 # fix tilix https://gnunn1.github.io/tilix-web/manual/vteconfig/
 sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 
+# install Vivaldi
+wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
+sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main'
+sudo apt update
+sudo apt install vivaldi-stable -y
+
+# install Edge
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
+sudo apt update
+sudo apt install microsoft-edge-stable -y
+
 # install stores
 sudo snap install snap-store
 # fix kde problems with snap applications https://www.reddit.com/r/kde/comments/9pjos2/snaps_in_application_launcher/eh0v1um/

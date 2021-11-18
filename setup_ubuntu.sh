@@ -106,6 +106,16 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/e
 sudo apt update
 sudo apt install microsoft-edge-stable -y
 
+# Install OneDrive client
+# https://github.com/abraunegg/onedrive/blob/master/docs/INSTALL.md
+mkdir -p /home/$(whoami)/.config/onedrive
+ln -s /home/$(whoami)/Projects/Configs/.config/onedrive/config /home/$(whoami)/.config/onedrive/config
+ln -s /home/$(whoami)/Projects/Configs/.config/onedrive/sync_list /home/$(whoami)/.config/onedrive/sync_list
+# onedrive --logout
+onedrive # login
+onedrive --synchronize --resync
+systemctl --user enable onedrive && systemctl --user start onedrive
+
 # install stores
 sudo snap install snap-store
 # fix kde problems with snap applications https://www.reddit.com/r/kde/comments/9pjos2/snaps_in_application_launcher/eh0v1um/

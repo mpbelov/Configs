@@ -102,8 +102,8 @@ sudo apt install vivaldi-stable -y
 
 # install Edge
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
-sudo apt update
+# sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
+# sudo apt update
 sudo apt install microsoft-edge-stable -y
 
 # Install OneDrive client
@@ -125,39 +125,55 @@ sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
 
-flatpak install flathub org.telegram.desktop
-flatpak install flathub org.keepassxc.KeePassXC
+# Install KeePassXC
+sudo snap install keepassxc 
 
+# Install Telegram
+sudo snap install telegram-desktop
+
+# Install Sublime and Sublime Merge
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt update && sudo apt install -y sublime-merge
+sudo apt update
+sudo apt install -y sublime-merge
+sudo apt install -y sublime-text
 
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
 echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
 sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc"
 sudo apt update && sudo apt install -y albert
 
-sudo snap install --classic code
+# Install VS Code
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudp apt install code -y
+
+# Install .NET
+sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-6.0
 
 sudo apt install -y tmux
 sudo apt install -y neovim
 
-curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# Install NodeJS
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | zsh
+source ~/.zshrc
+nvm install --lts
+npm install --global yarn
 
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" |
-sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install -y yarn
-
+# Install .NET
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb;
 sudo dpkg -i packages-microsoft-prod.deb;
 sudo apt-get update; \
   sudo apt-get install -y apt-transport-https && \
   sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-3.1
+  sudo apt-get install -y dotnet-sdk-6.0
 
+# Install Java
 sudo apt install -y openjdk-11-jre
 
 sudo apt install -y python3-pip

@@ -52,7 +52,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # ####### Plugins #######
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(sudo history copyfile copydir z zsh-autosuggestions vscode git jsontools adb gulp react-native node yarn)
+plugins=(sudo history copyfile copypath z zsh-autosuggestions vscode git jsontools adb gulp react-native node yarn)
 # VERY SLOW:
 #   zsh-syntax-highlighting
 # NOT WORKING:

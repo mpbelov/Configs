@@ -36,6 +36,10 @@ ln -s /home/$(whoami)/Projects/Configs/.config/.p10k.zsh /home/$(whoami)/.config
 mkdir -p /home/$(whoami)/.omnisharp
 rm -f /home/$(whoami)/.omnisharp/omnisharp.json
 ln -s /home/$(whoami)/Projects/Configs/.omnisharp/omnisharp.json /home/$(whoami)/.omnisharp/omnisharp.json
+## tmux.conf
+rm -f /home/$(whoami)/.tmux.conf
+ln -s /home/$(whoami)/Projects/Configs/.tmux.conf /home/$(whoami)/.tmux.conf
+
 
 # Install fonts
 
@@ -151,7 +155,7 @@ sudo apt update && sudo apt install -y albert
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt update
-sudp apt install code -y
+sudo apt install code -y
 
 # Install .NET
 sudo apt-get update; \
@@ -168,14 +172,6 @@ source ~/.zshrc
 nvm install --lts
 npm install --global yarn
 
-# Install .NET
-wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb;
-sudo dpkg -i packages-microsoft-prod.deb;
-sudo apt-get update; \
-  sudo apt-get install -y apt-transport-https && \
-  sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-6.0
-
 # Install Java
 sudo apt install -y openjdk-8-jdk
 sudo apt install -y openjdk-11-jdk
@@ -187,3 +183,9 @@ pip install jupyterlab
 sudo apt install -y playonlinux
 sudo apt install -y gparted
 sudo apt install -y qbittorrent
+
+# Install Micro
+# https://github.com/zyedidia/micro#installation
+mkdir -p /home/$(whoami)/temp && cd /home/$(whoami)/temp
+curl https://getmic.ro | zsh
+sudo mv micro /usr/bin
